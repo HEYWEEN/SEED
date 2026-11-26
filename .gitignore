@@ -1,0 +1,29 @@
+# OS and editor files
+.DS_Store
+.idea/
+.vscode/
+
+# Browser extension build output
+node_modules/
+dist/
+build/
+coverage/
+*.crx
+*.pem
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local configuration and analysis assets
+.env
+.env.*
+!.env.example
+/.local/
+*.h5
+*.safetensors
+*.log

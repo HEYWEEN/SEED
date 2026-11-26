@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "SEED",
+  "version": "0.1.0",
+  "minimum_chrome_version": "120",
+  "description": "SEED for software engineering discussions on GitHub.",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA13i/5RgfcmiER1GdUyHy8MoYQrGTru2HW3kA2qY0j61fGTSaDueHBb3iLvT9YW6XEdjj582x/Q0IqJQe/mdV+OFv1d6oRg2he3j5/6VSt3vj/T/fofvuQJ6A+eeQfRSE/gvIz5F4rWkEFwfOmMX7xcddBUCJvEKPR2KWq0IV+yJVfSrbjI5vkfQbag/1ACRyLiQHrq/bKNgGIWf4+X/ktMIXwCU3d82Sqr2XmiqHsZwyca/pisCYHsmrJ4ZPvDk+u3XrOePSN498xn4XP34sW0gl4kunpW3qAGht2l/4ULs6DOHwZVsuFWmpfdhLg2gWd3U7slXzES014tzXO8wCJwIDAQAB",
+  "icons": {
+    "128": "seed-button.png"
+  },
+  "background": {
+    "service_worker": "worker.js"
+  },
+  "host_permissions": [
+    "http://127.0.0.1/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://github.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "options_ui": {
+    "page": "settings.html",
+    "open_in_tab": true
+  }
+}
